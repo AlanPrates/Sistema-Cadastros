@@ -25,11 +25,16 @@ and open the template in the editor.
     include './conexao_bd.php';
     $cpf = $_GET["cpf"];
     $nome = $_POST["txtNome"];
+    $matricula = $_POST["txtMatricula"];
     $datanascimento = $_POST["txtDatanascimento"];
+    $mae = $_POST["txtMae"];
+    $pai = $_POST["txtPai"];
+    $cep = $_POST["txtCep"];
     $endereco = $_POST["txtEndereco"];
     $telefone = $_POST["txtTelefone"];
+    $turma = $_POST["txtTurma"];
 
-    $sql = "UPDATE alunos SET nome = '$nome', datanascimento = '$datanascimento', endereco = '$endereco',telefone = '$telefone' WHERE cpf = '$cpf'";
+    $sql = "UPDATE alunos SET nome = '$nome', matricula = '$matricula', datanascimento = '$datanascimento',cep = '$cep', endereco = '$endereco',telefone = '$telefone', mae = '$mae', pai ='$pai', turma ='$turma' WHERE cpf = '$cpf'";
 
     if (executarComando($sql) == true) {
         echo "<h2>Aluno atualizado com sucesso</h2>";

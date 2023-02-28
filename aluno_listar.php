@@ -42,9 +42,15 @@ and open the template in the editor.
                                     
                                     <td>CPF</td>
                                     <td>Nome</td>
+                                    <td>Matricula</td>
                                     <td>Data de Nascimento</td>
+                                    <td>Nome da Mãe</td>
+                                    <td>Nome do Pai</td>
+                                    <td>CEP</td>
                                     <td>Endereço</td>
                                     <td>Telefone</td>
+                                    <td>Turma</td>
+
                                 </tr>
                                 
                                     
@@ -53,15 +59,25 @@ and open the template in the editor.
                                     {
                                         $cpf = $linha ["cpf"];
                                         $nome = $linha ["nome"];
+                                        $matricula = $linha ["matricula"];
                                         $datanascimento = $linha["datanascimento"];
+                                        $mae = $linha ["mae"];
+                                        $pai = $linha ["pai"];
+                                        $cep = $linha ["cep"];
                                         $endereco = $linha ["endereco"];
                                         $telefone = $linha ["telefone"];
+                                        $turma = $linha ["turma"];
                                     ?>
                                         <td><?php echo $cpf; ?></td>
                                         <td><?php echo $nome; ?></td>
+                                        <td><?php echo $matricula; ?></td>
                                         <td><?php echo $datanascimento; ?></td>
+                                        <td><?php echo $mae; ?></td>
+                                        <td><?php echo $pai; ?></td>
+                                        <td><?php echo $cep; ?></td>
                                         <td><?php echo $endereco; ?></td>
                                         <td><?php echo $telefone; ?></td>
+                                        <td><?php echo $turma; ?></td>
 
                                     </tr>
                                     <?php

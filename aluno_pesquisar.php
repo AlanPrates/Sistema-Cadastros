@@ -17,6 +17,7 @@ and open the template in the editor.
         <script src="js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="mascaras.js" type="text/javascript"></script>
 
     </head>
     <body>
@@ -27,7 +28,7 @@ and open the template in the editor.
                         <h2><p class="text-success">Pesquisar Aluno</p></h2>
                         <div class="form-group">
                             <label><p class="text-success">CPF</p></label>
-                            <input type="text" class="form-control" required="" placeholder="CPF do Aluno" name="txtCPF">
+                            <input type="text" class="form-control" required="" placeholder="CPF do Aluno (a)" name="txtCPF"onkeyup="formataCPF(this, event)" MaxLength="15">
                         </div>
                         
                           

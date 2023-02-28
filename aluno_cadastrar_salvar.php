@@ -26,16 +26,21 @@ and open the template in the editor.
     //pelo usuário no formulário
     $cpf = $_POST["txtCPF"];
     $nome = $_POST["txtNome"];
+    $matricula = $_POST["txtMatricula"];
     $datanascimento = $_POST["txtDatanascimento"];
+    $mae = $_POST["txtMae"];
+    $pai = $_POST["txtPai"];
+    $cep = $_POST["txtCep"];
     $endereco = $_POST["txtEndereco"];
     $telefone = $_POST["txtTelefone"];
+    $turma = $_POST["txtTurma"];
 
     //inclue as funções de acesso a dados
     include './conexao_bd.php';
 
     //comando SQL a ser executado no banco de dados
-    $sql = "INSERT INTO alunos(cpf,nome,datanascimento,endereco,telefone)"
-        . " VALUES ('$cpf','$nome','$datanascimento','$endereco','$telefone')";
+    $sql = "INSERT INTO alunos(cpf,nome,matricula,datanascimento,endereco,telefone,mae,pai,turma,cep)"
+        . " VALUES ('$cpf','$nome','$matricula','$datanascimento','$endereco','$telefone','$mae','$pai','$turma','$cep')";
 
     if (executarComando($sql) == true) {
         echo "<h1>Aluno cadastrado</h1>";

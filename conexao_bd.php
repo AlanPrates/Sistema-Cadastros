@@ -1,9 +1,9 @@
 <?php
 
-$servidor = "db4free.net";
-$usuario = "alunos";
-$senha = "12345678";
-$bd = "alunos333";
+$servidor = "localhost";
+$usuario = "root";
+$senha = "";
+$bd = "alunos";
 
 // Criando nova conexão 
 global $conn;

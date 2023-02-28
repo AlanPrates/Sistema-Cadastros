@@ -30,8 +30,12 @@ and open the template in the editor.
 
        $linha = mysqli_fetch_assoc($resultado);
        $nome =$linha["nome"];
+       $cep =$linha["cep"];
        $endereco =$linha["endereco"];
        $telefone = $linha["telefone"];
+       $mae = $linha["mae"];
+       $pai = $linha["pai"];
+       $turma = $linha["turma"];
        ?>
 
         <form name="formEditar" action="aluno_editar_salvar.php?cpf=<?php echo $cpf;?>" method="post">
@@ -45,20 +49,37 @@ and open the template in the editor.
                             <input value="<?php echo $linha["nome"]; ?>" type="text" class="form-control"  required="" placeholder="Nome completo" name="txtNome">
                         </div>
                         <div class="form-group">
+                            <label><p class="text-success">Matricula:</p></label>
+                            <input value="<?php echo $linha["matricula"]; ?>" type="text" class="form-control"  required="" placeholder="Matricula" name="txtMatricula">
+                        </div>
+                        <div class="form-group">
                             <label><p class="text-success">Data de Nascimento:</p></label>
-                            <input value="<?php echo $linha["datanascimento"]; ?>" id="date" type="date" class="form-control"  placeholder="Data de Nascimento"  name="txtDatanascimento">
+                            <input value="<?php echo $linha["datanascimento"]; ?>" id="date" type="text" class="form-control"  placeholder="DD/MM/YYYY" name="txtDatanascimento"onkeyup="formataData(this, event)" MaxLength="15">
+                        </div>
+                        <div class="form-group">
+                        <label><p class="text-success">Nome da Mãe:</p></label>
+                            <input value="<?php echo $linha["mae"]; ?>" type="text" class="form-control"  placeholder="Nome da Mãe" name="txtMae">
+                        </div>
+                        <div class="form-group">
+                        <label><p class="text-success">Nome do Pai:</p></label>
+                            <input value="<?php echo $linha["pai"]; ?>" type="text" class="form-control"  placeholder="Nome do Pai" name="txtPai">
+                        </div>
+                        <div class="form-group">
+                            <label><p class="text-success">CEP:</p></label>
+                            <input value="<?php echo $linha["cep"]; ?>" type="text" class="form-control"  placeholder="CEP do Barrio"  name="txtCep">
                         </div>
                         <div class="form-group">
                             <label><p class="text-success">Endereço:</p></label>
                             <input value="<?php echo $linha["endereco"]; ?>" type="text" class="form-control"  placeholder="Endereço"  name="txtEndereco">
                         </div>
-
-
                         <div class="form-group">
                         <label><p class="text-success">Telefone:</p></label>
                             <input value="<?php echo $linha["telefone"]; ?>" type="text" class="form-control"  placeholder="Telefone" name="txtTelefone">
                         </div>
-
+                        <div class="form-group">
+                        <label><p class="text-success">Turma:</p></label>
+                            <input value="<?php echo $linha["turma"]; ?>" type="text" class="form-control"  placeholder="Turma" name="txtTurma">
+                        </div>
                         <div class="form-group">
 
                             <input type="submit" value="Editar" class="btn btn-info" name="btEditar">
