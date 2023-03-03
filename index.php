@@ -29,6 +29,7 @@ session_start();
             <?php
             endif;
             unset($_SESSION['nao_autenticado']);
+            $_SESSION['logado'] = true;
             ?>
             <div class="user-box">
                 <form action="login.php" method="POST">
