@@ -21,6 +21,10 @@ and open the template in the editor.
     </head>
     <body>
        <?php 
+           if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+           {
+             header('location:index.php');
+             }
        include './conexao_bd.php';
        $cpf = $_POST["txtCPF"];
        
@@ -86,8 +90,8 @@ and open the template in the editor.
                             <a href="aluno_remover.php?cpf=<?php echo $cpf;?>">
                             <input type="button" value="Remover" class="btn btn-danger" name="btRemover">
                             </a>
-                            <a href="painel.php">
-            <input type="button" class="btn btn-warning" value="Voltar Painel" />
+                            <a href="Admin.php">
+            <input type="button" class="btn btn-warning" value="Voltar Admin" />
         </a>
                         </div>
 

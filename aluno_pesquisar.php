@@ -1,3 +1,10 @@
+<?php
+    if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+    {
+      header('location:index.php');
+      }
+      ?>
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -36,8 +43,8 @@ and open the template in the editor.
                         <div class="form-group">
 
                             <input type="submit" value="Pesquisar" class="btn btn-info" name="btPesquisar"  >
-                            <a href="painel.php">
-            <input type="button" class="btn btn-warning" value="Voltar Painel" />
+                            <a href="Admin.php">
+            <input type="button" class="btn btn-warning" value="Voltar Admin" />
         </a>
                         </div>
 

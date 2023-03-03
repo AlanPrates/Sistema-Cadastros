@@ -23,6 +23,10 @@ and open the template in the editor.
 
 <body>
     <?php
+        if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+        {
+          header('location:index.php');
+          }
     $sql = "SELECT * FROM alunos ORDER BY nome";
 
     include './conexao_bd.php';
@@ -88,8 +92,8 @@ and open the template in the editor.
                     </div>
                 </div>
             </div>
-            <a href="painel.php">
-            <input type="button" class="btn btn-warning" value="Voltar Painel" />
+            <a href="Admin.php">
+            <input type="button" class="btn btn-warning" value="Voltar Admin" />
         </a>
         </div>
     </form>

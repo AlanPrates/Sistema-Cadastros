@@ -71,8 +71,8 @@ and open the template in the editor.
                         <input id="date" type="text-sucess" class="form-control" placeholder="Turma exemplo: STI31" name="txtTurma">
                     </div>
                         <input type="submit" value="Cadastrar" class="btn btn-info" name="btCadastrar">
-                        <a href="painel.php">
-                            <input type="button" class="btn btn-warning" value="Voltar Painel" />
+                        <a href="Admin.php">
+                            <input type="button" class="btn btn-warning" value="Voltar pagina Inicial" />
                         </a>
                     </div>
 

@@ -22,6 +22,10 @@ and open the template in the editor.
 
 <body>
 <?php
+if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+  header('location:index.php');
+  }
     //Capturando os valores digitados
     //pelo usuário no formulário
     $cpf = $_POST["txtCPF"];
@@ -50,8 +54,8 @@ and open the template in the editor.
 
     ?>
 
-    <a href="painel.php">
-        <input type="button" class="btn btn-warning" value="Voltar Painel" />
+    <a href="Admin.php">
+        <input type="button" class="btn btn-warning" value="Voltar Admin" />
     </a>
 
 </body>

@@ -22,6 +22,10 @@ and open the template in the editor.
 
 <body>
     <?php
+    if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+    {
+      header('location:index.php');
+      }
     include './conexao_bd.php';
     $cpf = $_GET["cpf"];
     $nome = $_POST["txtNome"];
@@ -42,8 +46,8 @@ and open the template in the editor.
         echo "<h2>Erro ao atualizar o aluno</h2>";
     }
     ?>
-    <a href="painel.php">
-        <input type="button" class="btn btn-warning" value="Voltar Painel" />
+    <a href="Admin.php">
+        <input type="button" class="btn btn-warning" value="Voltar Admin" />
     </a>
 </body>
 
