@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('verifica_login.php');
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -21,10 +25,6 @@ and open the template in the editor.
     </head>
     <body>
        <?php 
-           if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
-           {
-             header('location:index.php');
-             }
        include './conexao_bd.php';
        $cpf = $_POST["txtCPF"];
        

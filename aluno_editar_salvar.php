@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('verifica_login.php');
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.

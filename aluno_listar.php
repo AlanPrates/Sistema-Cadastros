@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('verifica_login.php');
+?>
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -23,10 +28,7 @@ and open the template in the editor.
 
 <body>
     <?php
-        if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
-        {
-          header('location:index.php');
-          }
+
     $sql = "SELECT * FROM alunos ORDER BY nome";
 
     include './conexao_bd.php';
