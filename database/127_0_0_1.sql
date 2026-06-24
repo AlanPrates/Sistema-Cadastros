@@ -45,13 +45,14 @@ CREATE TABLE `tarefas` (
 CREATE TABLE `usuario` (
   `usuario_id` int(11) NOT NULL,
   `usuario` varchar(200) NOT NULL,
-  `senha` varchar(32) NOT NULL
+  `senha` varchar(255) NOT NULL,
+  `nivel_acesso` enum('admin','moderador') NOT NULL DEFAULT 'moderador'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 
-INSERT INTO `usuario` (`usuario_id`, `usuario`, `senha`) VALUES
-(1, 'AlanSuper', '202cb962ac59075b964b07152d234b70');
+INSERT INTO `usuario` (`usuario_id`, `usuario`, `senha`, `nivel_acesso`) VALUES
+(1, 'AlanSuper', '202cb962ac59075b964b07152d234b70', 'admin');
 
 
 ALTER TABLE `lista`
@@ -67,7 +68,8 @@ ALTER TABLE `tarefas`
 -- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`usuario_id`);
+  ADD PRIMARY KEY (`usuario_id`),
+  ADD UNIQUE KEY `usuario_unique` (`usuario`);
 
 --
 -- AUTO_INCREMENT for dumped tables

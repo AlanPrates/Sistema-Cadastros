@@ -1,0 +1,22 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs e editores
+.idea/
+.vscode/
+nbproject/private/
+
+# Dependencias e cache
+vendor/
+node_modules/
+
+# Ambiente local
+.env
+.env.local
+*.log
+tmp/
+temp/
+
+# Assistentes e arquivos locais
+.ollamassist/
